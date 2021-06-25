@@ -10,6 +10,6 @@ libraries{
         agent = "ubuntu-20.04-2cores-4Gig"
 
         images = ["node:12", "node:14", "node:16"]
-        tests = ["unit_tests.sh catapult-sdk", "unit_tests.sh rest", "unit_tests.sh spammer"]
+        tests = ["unit_test.sh catapult-sdk", "unit_test.sh rest", "unit_test.sh spammer"]
     }
 }
