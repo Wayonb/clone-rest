@@ -4,12 +4,12 @@
   library sources configured.
 */
 libraries{
-    generic {
-      buildScript = "scripts/pipeline/build.sh"
-      funtionalTestScript = "scripts/pipeline/functional_test.sh"
+
+    @override docker_build {
+        scriptPath = "scripts/pipeline"
+        agent = "ubuntu-20.04-2cores-4Gig"
+
+        images = ["node:12", "node:14", "node:16"]
+        tests = ["unit_tests.sh catapult-sdk", "unit_tests.sh rest", "unit_tests.sh spammer"]
     }
-    symbol_bootstrap {
-      install=true
-    }
-    e2e_automation
 }
