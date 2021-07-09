@@ -11,4 +11,9 @@ libraries{
         images = ["node:12", "node:14", "node:16"]
         tests = ["unit_test.sh catapult-sdk", "unit_test.sh rest", "unit_test.sh spammer"]
     }
+    publish_artifacts {
+        docker {
+	  image_name = 'symbolplatform/symbol-server-private'
+        }
+    }
 }
