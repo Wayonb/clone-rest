@@ -28,7 +28,7 @@ const restifyErrors = require('restify-errors');
 const winston = require('winston');
 const WebSocket = require('ws');
 
-const isPromise = object => object && object.catch;
+const  isPromise = object => object && object.catch;
 
 const toRestError = err => {
 	const restError = errors.toRestError(err);
