@@ -25,3 +25,4 @@ jobs:
           ignoreLabel: nocombine
           baseBranch: dev
           openPR: true
+          githubToken: ${{ secrets.MY_TOKEN }}
