@@ -23,5 +23,5 @@ jobs:
           mustBeGreen: true
           combineBranchName: combined-prs
           ignoreLabel: nocombine
-          baseBranch: main
+          baseBranch: dev
           openPR: true
