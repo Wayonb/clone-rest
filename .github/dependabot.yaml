@@ -1,0 +1,9 @@
+version: 2
+updates:
+
+  - package-ecosystem: npm
+    directory: /rest
+    schedule:
+      interval: daily
+    target-branch: dev
+    labels: [rest]
