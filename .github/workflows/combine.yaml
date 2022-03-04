@@ -1,0 +1,28 @@
+name: "Combine Dependabot PRs"
+# on:
+#   workflow_dispatch:
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+permissions:
+  pull-requests: write
+  repository-projects: write
+
+jobs:
+  combine-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.3
+        with:
+          token: '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'
+      - uses: maadhattah/combine-dependabot-prs@main
+        with:
+          branchPrefix: "dependabot"
+          mustBeGreen: true
+          combineBranchName: combined-prs
+          ignoreLabel: nocombine
+          baseBranch: dev
+          openPR: true
+          githubToken: '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'
